@@ -1,0 +1,10 @@
+---
+# file: appserver1.yml
+
+- hosts: appservers
+  remote_user: vagrant
+  tasks:
+    - name: create go directory /opt/go
+      file:
+        path: /opt/go
+        state: directory
