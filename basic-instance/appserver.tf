@@ -1,13 +1,7 @@
-provider "aws" {
-  access_key = "AKIAJZLWEZ6SZWMN5MJA"
-  secret_key = "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"
-  region     = "us-east-1"
-}
-
 resource "aws_instance" "appserver" {
   ami           = "ami-b374d5a5"
   instance_type = "t2.micro"
-  key_name	= "Oscar"
+  key_name	= "Oscar2018"
   subnet_id = "subnet-ec0262e0"
     security_groups = [
         "${aws_security_group.application_sg.id}",
